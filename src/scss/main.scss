@@ -1,1 +1,23 @@
 @import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+$gray1: #00000080;
+$gray2: #666666;
+$primary: #00C0EE;
+
+
+
+
+@import "header";
+@import "footer";
+
