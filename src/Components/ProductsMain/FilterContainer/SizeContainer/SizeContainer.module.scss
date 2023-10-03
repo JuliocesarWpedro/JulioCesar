@@ -1,0 +1,34 @@
+.sizeContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 160px;
+}
+
+.sizeContainer input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.sizeContainer input[type="checkbox"]+button {
+  border-radius: none;
+  border: 1px solid var(--gray2-color);
+  color: var(--gray2-color);
+  font-size: 16px;
+  background: #fff;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.sizeContainer input[type="checkbox"]:checked+button {
+  border: 2px solid var(--primary-color);
+  color: #000;
+}
+
+.sizeContainer label {
+  display: block;
+  cursor: pointer;
+}

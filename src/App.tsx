@@ -1,5 +1,6 @@
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
+import ProductsMain from './Components/ProductsMain/ProductsMain';
 import MainContainer from './Components/mainContainer/MainContainer';
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <>
       <Header />
       <MainContainer />
+      <ProductsMain />
       <Footer />
     </>
   );
