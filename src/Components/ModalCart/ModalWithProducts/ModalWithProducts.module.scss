@@ -1,0 +1,131 @@
+.xIcon {
+  cursor: pointer;
+  position: absolute;
+  top: 19px;
+  left: 30px;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+.ball {
+  position: absolute;
+  top: 5px;
+  left: 14px;
+  width: 30px;
+  height: 30px;
+  background-color: #444;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.closeIcon:hover .ball {
+  opacity: 1;
+
+}
+
+.modalProducts {
+  padding: 24px;
+  padding-top: 80px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+
+.productItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.productItem h3 {
+  margin: 10px 0;
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  color: black;
+}
+
+.productItem p {
+  margin-bottom: 1px;
+  font-family: Open Sans;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
+
+
+.productItem h4 {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--gray2-color);
+  margin-bottom: 14px;
+}
+
+.quantityContainer {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantityContainer button {
+  flex: 1;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-family: Open Sans;
+  outline: none;
+  border: 1px solid rgb(214, 214, 214);
+  padding: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(77, 77, 77);
+}
+
+.quantityContainer div {
+  font-family: Open Sans;
+
+  padding: 17px;
+  flex: 1;
+  border: 1px solid rgb(214, 214, 214);
+}
+
+.quantityContainer button:hover {
+  background: rgb(214, 214, 214);
+  transition: .3s;
+}
+
+.productRemove {
+  align-self: start;
+}
+
+.productRemove {
+  font-family: Open Sans, sans-serif;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--gray2-color);
+  outline: none;
+  font-size: 15px;
+  padding: 16px 30px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.productRemove:hover {
+  color: var(--gray2-color);
+}

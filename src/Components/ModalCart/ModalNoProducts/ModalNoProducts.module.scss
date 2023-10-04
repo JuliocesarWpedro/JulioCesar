@@ -1,0 +1,96 @@
+.emptyModal {
+  position: absolute;
+  z-index: 5;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  text-align: center;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.emptyModal h4 {
+  padding-top: 40px;
+  font-size: 35px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+  font-family: Open Sans;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+.emptyModal p {
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+  color: var(--gray2-color);
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+
+.emptyModal button {
+  font-family: Open Sans, sans-serif;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--gray2-color);
+  outline: none;
+  font-size: 15px;
+  padding: 16px 30px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.emptyModal button:hover {
+  color: var(--gray2-color);
+
+}
+
+.cartContains {
+  font-family: Open Sans, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  justify-content: center;
+  background-color: black;
+  padding: 10px;
+  color: var(--primary-color);
+}
+
+
+.close-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.xIcon {
+  cursor: pointer;
+  position: absolute;
+  top: 19px;
+  left: 30px;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+.ball {
+  position: absolute;
+  top: 5px;
+  left: 14px;
+  width: 30px;
+  height: 30px;
+  background-color: #1e1e1e;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.closeIcon:hover .ball {
+  opacity: 1;
+}

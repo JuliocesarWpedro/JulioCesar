@@ -3,8 +3,9 @@ import useFetch from '../../../../Hooks/useFetch';
 import { Products } from '../../../../ts/Products';
 import styles from './ProductItens.module.scss';
 import { useFilter } from '../../../../Contexts/FilterContext';
+import { useCart } from '../../../../Contexts/CartContext';
 
-const formatPrice = (price: number): string => {
+export const formatPrice = (price: number): string => {
   const formattedPrice = price.toFixed(2);
   return formattedPrice.replace('.', ',');
 };
@@ -17,6 +18,8 @@ const ProductItens = ({
   setShowButton: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const { data } = useFetch<Products[]>('http://localhost:5000/products');
+
+  const { toggleCart, addToCart } = useCart();
 
   const { selectedPrice, selectedColors, selectedSizes, orderOption } =
     useFilter();
@@ -85,7 +88,15 @@ const ProductItens = ({
               até {item.parcelamento[0]}x de R$
               {formatPrice(item.parcelamento[1])}
             </h4>
-            <button type="button">COMPRAR</button>
+            <button
+              onClick={() => {
+                addToCart(item);
+                toggleCart();
+              }}
+              type="button"
+            >
+              COMPRAR
+            </button>
           </div>
         ))}
     </div>
