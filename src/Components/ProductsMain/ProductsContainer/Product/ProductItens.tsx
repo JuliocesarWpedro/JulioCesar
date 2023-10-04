@@ -4,6 +4,11 @@ import { Products } from '../../../../ts/Products';
 import styles from './ProductItens.module.scss';
 import { useFilter } from '../../../../Contexts/FilterContext';
 
+const formatPrice = (price: number): string => {
+  const formattedPrice = price.toFixed(2);
+  return formattedPrice.replace('.', ',');
+};
+
 const ProductItens = ({
   limitProducts,
   setShowButton,
@@ -75,9 +80,10 @@ const ProductItens = ({
           <div className={styles.productItem} key={item.id}>
             <img src={item.image} alt={item.name} />
             <h3>{item.name}</h3>
-            <p>{item.price}</p>
+            <p>{formatPrice(item.price)}</p>
             <h4>
-              até {item.parcelamento[0]}x de R${item.parcelamento[1]}
+              até {item.parcelamento[0]}x de R$
+              {formatPrice(item.parcelamento[1])}
             </h4>
             <button type="button">COMPRAR</button>
           </div>
