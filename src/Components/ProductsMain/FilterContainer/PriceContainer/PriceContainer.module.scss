@@ -13,13 +13,13 @@
   opacity: 0;
 }
 
-.priceContainer input[type="radio"]+label {
+.priceContainer input[type="checkbox"]+label {
   position: relative;
   cursor: pointer;
   padding-left: 24px;
 }
 
-.priceContainer input[type="radio"]+label::before {
+.priceContainer input[type="checkbox"]+label::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -30,7 +30,7 @@
   vertical-align: bottom;
 }
 
-.priceContainer input[type="radio"]:checked+label::after {
+.priceContainer input[type="checkbox"]:checked+label::after {
   content: "";
   position: absolute;
   left: 3px;
