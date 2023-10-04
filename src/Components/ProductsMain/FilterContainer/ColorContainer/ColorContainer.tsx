@@ -7,9 +7,9 @@ import { useFilter } from '../../../../Contexts/FilterContext';
 const ColorContainer = () => {
   const [numberMaxColor, setNumberMaxColor] = React.useState<number>(5);
 
-  const { selectedColors, setSelectedColors } = useFilter();
+  const {  setSelectedColors } = useFilter();
 
-  console.log(selectedColors, setSelectedColors);
+
 
   const toggleColor = (color: string) => {
     setSelectedColors((prevState) => {

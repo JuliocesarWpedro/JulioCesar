@@ -1,7 +1,7 @@
 import React from 'react';
 import { Price } from '../ts/Products';
 
-type Size = string | number;
+type Size = string;
 
 interface IFilter {
   orderOption: string;

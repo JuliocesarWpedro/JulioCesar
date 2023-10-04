@@ -11,9 +11,9 @@ const OrderList = () => {
     if (option === 'recent') {
       setOrderOption('recent');
     } else if (option === 'lowestPrice') {
-      setOrderOption('menor preço');
+      setOrderOption('lowestPrice');
     } else if (option === 'biggestPrice') {
-      setOrderOption('Maior preço');
+      setOrderOption('biggestPrice');
     }
   }
 

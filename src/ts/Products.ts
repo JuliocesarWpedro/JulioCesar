@@ -11,7 +11,7 @@ export interface Products {
   parcelamento: Array<number>;
   color: string;
   image: string;
-  size: Array<string>;
+  size: string;
   date: string;
 }
 
@@ -28,7 +28,19 @@ export const colors = [
   'Vinho',
 ];
 
-export const sizes = ['P', 'M', 'G', 'GG', 'U', 36, 38, 40, 42, 44, 46];
+export const sizes = [
+  'P',
+  'M',
+  'G',
+  'GG',
+  'U',
+  '36',
+  '38',
+  '40',
+  '42',
+  '44',
+  '46',
+];
 
 export const prices: Price[] = [
   {

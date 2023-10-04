@@ -3,7 +3,7 @@ import styles from './SizeContainer.module.scss';
 import { sizes } from '../../../../ts/Products';
 import { useFilter } from '../../../../Contexts/FilterContext';
 
-type Size = string | number;
+type Size = string;
 
 const SizeContainer = () => {
   const { setSelectedSizes } = useFilter();

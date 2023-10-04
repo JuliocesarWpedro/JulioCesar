@@ -1,0 +1,26 @@
+.productsContainer {
+  display: grid;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.productContainer {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.loadMore {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: rgb(255, 255, 255);
+  height: 35px;
+  padding: 0px 32px;
+  font-weight: bold;
+  margin: 0 0 35px 0;
+  cursor: pointer;
+}
