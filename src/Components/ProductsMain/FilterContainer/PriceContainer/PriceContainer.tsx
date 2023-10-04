@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './PriceContainer.module.scss';
 import { prices } from '../../../../ts/Products';
+import { useFilter } from '../../../../Contexts/FilterContext';
 
 const PriceContainer = () => {
-  const [selectedPrice, setSelectedPrice] = React.useState();
+  const { selectedPrice, setSelectedPrice } = useFilter();
+
   console.log(selectedPrice);
 
   return (

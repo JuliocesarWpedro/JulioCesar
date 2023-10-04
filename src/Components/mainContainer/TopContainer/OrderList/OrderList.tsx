@@ -1,17 +1,19 @@
 import React from 'react';
 import styles from './OrderList.module.scss';
 import arrowIcon from '../../../../img/Icons/ArrowIcon.svg';
+import { useFilter } from '../../../../Contexts/FilterContext';
 
 const OrderList = () => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  const { setOrderOption } = useFilter();
 
   function handleOrder(option: string) {
     if (option === 'recent') {
-      console.log('recent');
+      setOrderOption('recent');
     } else if (option === 'lowestPrice') {
-      console.log('menor preço');
+      setOrderOption('menor preço');
     } else if (option === 'biggestPrice') {
-      console.log('Maior preço');
+      setOrderOption('Maior preço');
     }
   }
 

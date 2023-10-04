@@ -1,7 +1,13 @@
+import React from 'react';
+import { useFilter } from '../../../Contexts/FilterContext';
 import styles from './ProductsContainer.module.scss';
 
 const ProductsContainer = () => {
-  return <div className={styles.productsContainer}>ProductsContainer</div>;
+  const { selectedPrice, selectedColors, selectedSizes } = useFilter();
+
+  return <div className={styles.productsContainer}>
+    
+  </div>;
 };
 
 export default ProductsContainer;

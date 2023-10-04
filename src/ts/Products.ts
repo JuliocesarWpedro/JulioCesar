@@ -1,3 +1,9 @@
+export interface Price {
+  value: string;
+  minPrice: number;
+  maxPrice: number;
+}
+
 export interface Products {
   id: string;
   name: string;
@@ -24,7 +30,7 @@ export const colors = [
 
 export const sizes = ['P', 'M', 'G', 'GG', 'U', 36, 38, 40, 42, 44, 46];
 
-export const prices = [
+export const prices: Price[] = [
   {
     value: 'de R$0 até R$50',
     minPrice: 1,

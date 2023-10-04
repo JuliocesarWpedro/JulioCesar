@@ -1,16 +1,17 @@
 import React from 'react';
 import styles from './SizeContainer.module.scss';
 import { sizes } from '../../../../ts/Products';
+import { useFilter } from '../../../../Contexts/FilterContext';
 
 type Size = string | number;
 
 const SizeContainer = () => {
-  const [selectedSizes, setSelectedSizes] = React.useState<Size[]>([]);
-  console.log(selectedSizes);
+  const { setSelectedSizes } = useFilter();
 
   const toggleSize = (size: Size) => {
     setSelectedSizes((prevSizes) => {
-      if (prevSizes.includes(size)) {
+      const prevSizesArray = prevSizes as Size[];
+      if (prevSizesArray.includes(size)) {
         return prevSizes.filter((prevSize) => prevSize !== size);
       } else {
         return [...prevSizes, size];
