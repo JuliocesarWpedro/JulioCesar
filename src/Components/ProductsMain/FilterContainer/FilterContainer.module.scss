@@ -12,3 +12,9 @@
   letter-spacing: 0.05em;
   color: #333333;
 }
+
+@media(max-width: 1024px) {
+  .filterContainer {
+    display: none;
+  }
+}

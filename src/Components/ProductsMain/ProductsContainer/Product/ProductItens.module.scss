@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: center;
   width: 195px;
+  height: 423px;
 }
 
 .productItem h3 {
@@ -57,5 +58,27 @@
   height: 40px;
   max-width: 195px;
   font-weight: bold;
+}
 
+.productItem img {
+  width: 100%;
+}
+
+
+@media (max-width: 1024px) {
+  .productItem {
+    width: 162px;
+    height: 357.14px;
+  }
+
+  .productItem img {
+    width: 161.79px;
+    height: 242.55px;
+  }
+}
+
+@media (max-width: 750px) {
+  .productItens {
+    gap: 19px;
+  }
 }

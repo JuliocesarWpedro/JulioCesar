@@ -35,8 +35,13 @@
   color: #FFFFFF;
 }
 
-@media(max-width: 800px) {
-  header {
+.header a img {
+  width: 100%;
+}
+
+@media(max-width: 900px) {
+  .header {
     padding: 16px 27px;
   }
+
 }

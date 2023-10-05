@@ -2,3 +2,63 @@
   display: flex;
   padding: 0 162px;
 }
+
+@media(max-width: 1270px) {
+  .productsMain {
+    padding: 0 100px;
+  }
+}
+
+@media(max-width: 1150px) {
+  .productsMain {
+    padding: 0 80px;
+  }
+}
+
+@media(max-width: 1110px) {
+  .productsMain {
+    padding: 0 60px;
+  }
+}
+
+@media(max-width: 1070px) {
+  .productsMain {
+    padding: 0 40px;
+  }
+}
+
+@media(max-width: 1024px) {
+  .productsMain {
+    padding: 0 150px;
+  }
+}
+
+@media(max-width: 915px) {
+  .productsMain {
+    padding: 0 100px;
+  }
+}
+
+@media(max-width: 815px) {
+  .productsMain {
+    padding: 0 55px;
+  }
+}
+
+@media(max-width: 725px) {
+  .productsMain {
+    padding: 0 50px;
+  }
+}
+
+@media(max-width: 625px) {
+  .productsMain {
+    padding: 0 32px;
+  }
+}
+
+@media(max-width: 500px) {
+  .productsMain {
+    padding: 0 16px;
+  }
+}

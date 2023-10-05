@@ -26,6 +26,7 @@
 }
 
 .modalProducts {
+  justify-content: center;
   padding: 24px;
   padding-top: 80px;
   display: flex;
@@ -128,4 +129,10 @@
 
 .productRemove:hover {
   color: var(--gray2-color);
+}
+
+@media (max-width: 415px) {
+  .modalProducts {
+    flex-direction: column;
+  }
 }

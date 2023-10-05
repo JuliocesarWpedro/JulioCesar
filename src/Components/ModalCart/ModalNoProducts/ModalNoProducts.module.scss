@@ -102,3 +102,9 @@
 .closeIcon:hover .ball {
   opacity: 1;
 }
+
+@media (max-width: 588px) {
+  .emptyModal {
+    max-width: 588px;
+  }
+}
