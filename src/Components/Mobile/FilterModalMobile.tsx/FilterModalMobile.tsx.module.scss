@@ -1,0 +1,45 @@
+.filterMobile {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterContainer {
+  width: 100%;
+  background: white;
+  height: 100%;
+  border-radius: 4px;
+  text-align: center;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.topFilterContainer {
+  border-bottom: 1px solid var(--gray2-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+}
+
+.topFilterContainer h2 {
+  font-family: Open Sans, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0em;
+  color: var(--gray2-color);
+}
+
+.topFilterContainer img {
+  cursor: pointer;
+}

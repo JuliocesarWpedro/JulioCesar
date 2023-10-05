@@ -55,7 +55,7 @@
   background: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   width: 100%;
-  height: 40px;
+  padding: 7px 0;
   max-width: 195px;
   font-weight: bold;
 }
@@ -66,6 +66,10 @@
 
 
 @media (max-width: 1024px) {
+  .productItem button {
+    max-width: 162px;
+  }
+
   .productItem {
     width: 162px;
     height: 357.14px;
@@ -78,6 +82,10 @@
 }
 
 @media (max-width: 750px) {
+  .productItem {
+    margin-top: 18px;
+  }
+
   .productItens {
     gap: 19px;
   }

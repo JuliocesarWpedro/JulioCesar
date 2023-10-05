@@ -14,6 +14,7 @@ interface IFilter {
   setSelectedColors: React.Dispatch<React.SetStateAction<[] | string[]>>;
   toggleColor: (color: string) => void;
   toggleSize: (size: Size) => void;
+  handleOrder: (option: string) => void;
   handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -35,6 +36,16 @@ export function FilterContextProvider({ children }: React.PropsWithChildren) {
       }
     });
   };
+
+  function handleOrder(option: string) {
+    if (option === 'recent') {
+      setOrderOption('recent');
+    } else if (option === 'lowestPrice') {
+      setOrderOption('lowestPrice');
+    } else if (option === 'biggestPrice') {
+      setOrderOption('biggestPrice');
+    }
+  }
 
   const toggleSize = (size: Size) => {
     setSelectedSizes((prevSizes) => {
@@ -64,6 +75,7 @@ export function FilterContextProvider({ children }: React.PropsWithChildren) {
   return (
     <FilterContext.Provider
       value={{
+        handleOrder,
         handleCheckboxChange,
         toggleSize,
         toggleColor,

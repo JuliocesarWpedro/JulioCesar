@@ -5,17 +5,7 @@ import { useFilter } from '../../../../Contexts/FilterContext';
 
 const OrderList = () => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
-  const { setOrderOption } = useFilter();
-
-  function handleOrder(option: string) {
-    if (option === 'recent') {
-      setOrderOption('recent');
-    } else if (option === 'lowestPrice') {
-      setOrderOption('lowestPrice');
-    } else if (option === 'biggestPrice') {
-      setOrderOption('biggestPrice');
-    }
-  }
+  const { setOrderOption, handleOrder } = useFilter();
 
   return (
     <div onClick={() => setIsOpen(!isOpen)} className={styles.boxOrderList}>
