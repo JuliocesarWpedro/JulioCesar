@@ -3,21 +3,7 @@ import { prices } from '../../../../ts/Products';
 import { useFilter } from '../../../../Contexts/FilterContext';
 
 const PriceContainer = () => {
-  const { selectedPrice, setSelectedPrice } = useFilter();
-
-  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedValue = JSON.parse(event.target.value);
-
-    if (
-      selectedPrice &&
-      selectedValue.minPrice === selectedPrice.minPrice &&
-      selectedValue.maxPrice === selectedPrice.maxPrice
-    ) {
-      setSelectedPrice(null); // Desmarca o checkbox se ele já estiver selecionado
-    } else {
-      setSelectedPrice(selectedValue); // Marca o checkbox selecionado
-    }
-  };
+  const { selectedPrice, handleCheckboxChange } = useFilter();
 
   return (
     <>

@@ -7,20 +7,7 @@ import { useFilter } from '../../../../Contexts/FilterContext';
 const ColorContainer = () => {
   const [numberMaxColor, setNumberMaxColor] = React.useState<number>(5);
 
-  const {  setSelectedColors } = useFilter();
-
-
-
-  const toggleColor = (color: string) => {
-    setSelectedColors((prevState) => {
-      const prevColors = prevState as string[];
-      if (prevColors.includes(color)) {
-        return prevState.filter((item) => item !== color) as string[]; // Correção do tipo
-      } else {
-        return [...prevState, color] as string[]; // Correção do tipo
-      }
-    });
-  };
+  const { toggleColor } = useFilter();
 
   return (
     <>

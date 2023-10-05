@@ -6,18 +6,7 @@ import { useFilter } from '../../../../Contexts/FilterContext';
 type Size = string;
 
 const SizeContainer = () => {
-  const { setSelectedSizes } = useFilter();
-
-  const toggleSize = (size: Size) => {
-    setSelectedSizes((prevSizes) => {
-      const prevSizesArray = prevSizes as Size[];
-      if (prevSizesArray.includes(size)) {
-        return prevSizes.filter((prevSize) => prevSize !== size);
-      } else {
-        return [...prevSizes, size];
-      }
-    });
-  };
+  const { toggleSize } = useFilter();
 
   return (
     <div className={styles.sizeContainer}>
