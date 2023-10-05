@@ -37,7 +37,6 @@ export function FilterContextProvider({ children }: React.PropsWithChildren) {
     });
   };
 
-  console.log(selectedColors, selectedPrice, selectedSizes);
 
   function handleOrder(option: string) {
     if (option === 'recent') {

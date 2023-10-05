@@ -1,3 +1,17 @@
+
+Projeto realizado com React + Typescript + scss
+
+Adicionais: Minicart com produtos sendo salvos via localStorage
+
+Para rodar o site:
+
+-> Instale as dependencias usando "yarn" ou "npm i"
+
+-> Depois rode o site usando "npm run start:full"
+
+Email: juliowpedro@gmail.com
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
