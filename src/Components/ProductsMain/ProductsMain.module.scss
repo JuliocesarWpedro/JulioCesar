@@ -13,10 +13,13 @@ $breakpoints: (
 
 .productsMain {
   display: flex;
-
   @each $bp in $breakpoints {
     @media (max-width: #{nth($bp, 1)}) {
-      padding: 0 nth($bp, 2);
+      padding: 0 #{nth($bp, 2)};
     }
+  }
+
+  @media (min-width: 1271px) {
+    padding: 0 157px;
   }
 }
