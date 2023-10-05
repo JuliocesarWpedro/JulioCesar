@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './OrderModalList.module.scss';
+import styles from './OrderModalMobile.module.scss';
 import closeIcon from '../../../img/Icons/Close.svg';
 import { useFilter } from '../../../Contexts/FilterContext';
 
-const OrderModalList = ({
+const OrderModalMobile = ({
   setOpenModalOrder,
 }: {
   setOpenModalOrder: React.Dispatch<React.SetStateAction<boolean>>;
@@ -39,7 +39,7 @@ const OrderModalList = ({
             </li>
             <li
               onClick={() => {
-                setOpenModalOrder(false), handleOrder('biggestPrice');
+                setOpenModalOrder(false), handleOrder('lowestPrice');
               }}
             >
               Menor preço
@@ -51,4 +51,4 @@ const OrderModalList = ({
   );
 };
 
-export default OrderModalList;
+export default OrderModalMobile;

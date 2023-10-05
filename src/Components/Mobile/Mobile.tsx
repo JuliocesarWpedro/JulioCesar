@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Mobile.module.scss';
 import FilterMobile from './FilterMobile/FilterMobile';
 import FilterModalMobile from './FilterModalMobile.tsx/FilterModalMobile.tsx';
-import OrderModalList from './OrderList/OrderModalList.tsx';
+import OrderModalMobile from './OrderList/OrderModalMobile.tsx';
 
 const Mobile = () => {
   const [openModalFilter, setOpenModalFilter] = React.useState<boolean>(false);
@@ -29,7 +29,7 @@ const Mobile = () => {
         <FilterModalMobile setOpenModalFilter={setOpenModalFilter} />
       )}
       {openModalOrder && (
-        <OrderModalList setOpenModalOrder={setOpenModalOrder} />
+        <OrderModalMobile setOpenModalOrder={setOpenModalOrder} />
       )}
     </>
   );
