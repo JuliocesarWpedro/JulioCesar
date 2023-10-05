@@ -60,7 +60,6 @@ export function CartContextProvider({
     );
 
     if (existingItemIndex !== -1) {
-      // O item já existe, vamos atualizar a quantidade e o preço total
       const updatedCartItems = [...cartItems];
       updatedCartItems[existingItemIndex] = {
         ...updatedCartItems[existingItemIndex],
@@ -71,7 +70,6 @@ export function CartContextProvider({
       setCartItems(updatedCartItems);
       setProductsInLStorage(updatedCartItems);
     } else {
-      // O item não existe, vamos adicionar um novo item
       const newItem: CartItem = {
         ...product,
         quantity: 1,
@@ -81,7 +79,7 @@ export function CartContextProvider({
       setProductsInLStorage((prevItems) => [...prevItems, newItem]);
     }
   }
-  
+
   function removeFromCart(productId: string) {
     setCartItems((prevCartItems) =>
       prevCartItems.filter((item) => item.id !== productId),

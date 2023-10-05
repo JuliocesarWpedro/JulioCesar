@@ -5,7 +5,7 @@ import { useFilter } from '../../../../Contexts/FilterContext';
 
 const OrderList = () => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
-  const { setOrderOption, handleOrder } = useFilter();
+  const { handleOrder } = useFilter();
 
   return (
     <div onClick={() => setIsOpen(!isOpen)} className={styles.boxOrderList}>

@@ -30,12 +30,14 @@ export function FilterContextProvider({ children }: React.PropsWithChildren) {
     setSelectedColors((prevState) => {
       const prevColors = prevState as string[];
       if (prevColors.includes(color)) {
-        return prevState.filter((item) => item !== color) as string[]; // Correção do tipo
+        return prevState.filter((item) => item !== color) as string[];
       } else {
-        return [...prevState, color] as string[]; // Correção do tipo
+        return [...prevState, color] as string[];
       }
     });
   };
+
+  console.log(selectedColors, selectedPrice, selectedSizes);
 
   function handleOrder(option: string) {
     if (option === 'recent') {
@@ -68,9 +70,9 @@ export function FilterContextProvider({ children }: React.PropsWithChildren) {
       selectedValue.minPrice === selectedPrice.minPrice &&
       selectedValue.maxPrice === selectedPrice.maxPrice
     ) {
-      setSelectedPrice(null); // Desmarca o checkbox se ele já estiver selecionado
+      setSelectedPrice(null);
     } else {
-      setSelectedPrice(selectedValue); // Marca o checkbox selecionado
+      setSelectedPrice(selectedValue);
     }
   };
 

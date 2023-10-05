@@ -1,6 +1,6 @@
 import FilterContainer from './FilterContainer/FilterContainer';
 import ProductsContainer from './ProductsContainer/ProductsContainer';
-import styles from './ProductsMain.module.scss'
+import styles from './ProductsMain.module.scss';
 
 const ProductsMain = () => {
   return (

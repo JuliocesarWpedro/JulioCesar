@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './ProductsContainer.module.scss';
 import ProductItens from './Product/ProductItens';
 
@@ -6,8 +6,25 @@ const ProductsContainer = () => {
   const [limitProducts, setLimitProducts] = React.useState(9);
   const [showButton, setShowButton] = React.useState(false);
 
+  const handleResize = () => {
+    if (window.innerWidth < 600) {
+      setLimitProducts(4);
+    } else {
+      setLimitProducts(9);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   function modifyLimit() {
-    setLimitProducts((products) => products + 3);
+    setLimitProducts((prevLimit) => {
+      const increaseAmount = window.innerWidth < 600 ? 4 : 3;
+      return prevLimit + increaseAmount;
+    });
   }
 
   return (
