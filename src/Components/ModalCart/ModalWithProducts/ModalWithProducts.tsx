@@ -10,6 +10,7 @@ const ModalWithProducts = ({
   index: number;
 }) => {
   const { increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
+
   return (
     <div key={index} className={styles.modalProducts}>
       <div>
@@ -19,9 +20,9 @@ const ModalWithProducts = ({
         <h2>{item.name}</h2>
         <p>R$ {formatPrice(item.price * item.quantity)}</p>
         <div className={styles.quantityContainer}>
-          <button onClick={() => increaseQuantity(item)}>+</button>
-          <div className={styles.quantity}>{item.quantity}</div>
           <button onClick={() => decreaseQuantity(item)}>-</button>
+          <div className={styles.quantity}>{item.quantity}</div>
+          <button onClick={() => increaseQuantity(item)}>+</button>
         </div>
         <button
           onClick={() => removeFromCart(item.id)}

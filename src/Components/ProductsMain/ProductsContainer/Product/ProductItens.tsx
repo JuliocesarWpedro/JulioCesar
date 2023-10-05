@@ -34,7 +34,6 @@ const ProductItens = ({
     }
 
     if (Array.isArray(selectedSizes) && selectedSizes.length > 0) {
-      console.log('Selected sizes:', selectedSizes);
       products = products.filter((product) => {
         if (Array.isArray(product.size)) {
           const hasSelectedSize = selectedSizes.some((size) =>

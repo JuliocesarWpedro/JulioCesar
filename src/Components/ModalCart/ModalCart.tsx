@@ -4,7 +4,8 @@ import ModalWithProducts from './ModalWithProducts/ModalWithProducts';
 import ModalNoProducts from './ModalNoProducts/ModalNoProducts';
 
 const ModalCart = () => {
-  const { cartItems, toggleCart, isOpen } = useCart();
+  const { productsInLStorage, setProductsInLStorage, toggleCart, isOpen } =
+    useCart();
 
   return (
     <>
@@ -19,18 +20,21 @@ const ModalCart = () => {
 
               <h3>
                 Seu carrinho (
-                {cartItems.reduce(
-                  (accumulator, current) => (accumulator += current.quantity),
-                  0,
-                )}{' '}
+                {productsInLStorage &&
+                  productsInLStorage.reduce(
+                    (accumulator, current) => (accumulator += current.quantity),
+                    0,
+                  )}{' '}
                 itens)
               </h3>
             </div>
-            {cartItems && cartItems.length === 0 && <ModalNoProducts />}
-            {cartItems &&
-              cartItems.length > 0 &&
-              cartItems.map((item, index) => (
-                <ModalWithProducts item={item} index={index} />
+            {productsInLStorage && productsInLStorage.length === 0 && (
+              <ModalNoProducts />
+            )}
+            {productsInLStorage &&
+              productsInLStorage.length > 0 &&
+              productsInLStorage.map((item, index) => (
+                <ModalWithProducts key={item.id} item={item} index={index} />
               ))}
           </div>
           <div
