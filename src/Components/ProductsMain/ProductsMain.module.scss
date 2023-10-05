@@ -1,64 +1,22 @@
+$breakpoints: (
+  (1270px, 100px),
+  (1150px, 80px),
+  (1110px, 60px),
+  (1070px, 40px),
+  (1024px, 150px),
+  (915px, 100px),
+  (815px, 55px),
+  (725px, 50px),
+  (625px, 32px),
+  (500px, 16px)
+);
+
 .productsMain {
   display: flex;
-  padding: 0 162px;
-}
 
-@media(max-width: 1270px) {
-  .productsMain {
-    padding: 0 100px;
-  }
-}
-
-@media(max-width: 1150px) {
-  .productsMain {
-    padding: 0 80px;
-  }
-}
-
-@media(max-width: 1110px) {
-  .productsMain {
-    padding: 0 60px;
-  }
-}
-
-@media(max-width: 1070px) {
-  .productsMain {
-    padding: 0 40px;
-  }
-}
-
-@media(max-width: 1024px) {
-  .productsMain {
-    padding: 0 150px;
-  }
-}
-
-@media(max-width: 915px) {
-  .productsMain {
-    padding: 0 100px;
-  }
-}
-
-@media(max-width: 815px) {
-  .productsMain {
-    padding: 0 55px;
-  }
-}
-
-@media(max-width: 725px) {
-  .productsMain {
-    padding: 0 50px;
-  }
-}
-
-@media(max-width: 625px) {
-  .productsMain {
-    padding: 0 32px;
-  }
-}
-
-@media(max-width: 500px) {
-  .productsMain {
-    padding: 0 16px;
+  @each $bp in $breakpoints {
+    @media (max-width: #{nth($bp, 1)}) {
+      padding: 0 nth($bp, 2);
+    }
   }
 }

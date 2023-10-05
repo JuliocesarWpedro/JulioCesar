@@ -5,6 +5,10 @@
   flex-wrap: wrap;
   gap: 64px;
   margin-bottom: 70px;
+
+  @media (max-width: 750px) {
+    gap: 19px;
+  }
 }
 
 .productItem {
@@ -14,79 +18,69 @@
   justify-content: center;
   width: 195px;
   height: 423px;
-}
 
-.productItem h3 {
-  margin: 10px 0;
-  font-family: Open Sans, sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 400;
-  line-height: 19px;
-  letter-spacing: 0em;
-  color: black;
-}
-
-.productItem p {
-  margin-bottom: 1px;
-  font-family: Open Sans;
-  color: black;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0em;
-}
-
-
-.productItem h4 {
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: var(--gray2-color);
-  margin-bottom: 14px;
-}
-
-.productItem button {
-  cursor: pointer;
-  border: 1px solid rgb(0, 0, 0);
-  background: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  width: 100%;
-  padding: 7px 0;
-  max-width: 195px;
-  font-weight: bold;
-}
-
-.productItem img {
-  width: 100%;
-}
-
-
-@media (max-width: 1024px) {
-  .productItem button {
-    max-width: 162px;
+  & h3 {
+    margin: 10px 0;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: black;
   }
 
-  .productItem {
+  & p {
+    margin-bottom: 1px;
+    font-family: Open Sans;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+  }
+
+  & h4 {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--gray2-color);
+    margin-bottom: 14px;
+  }
+
+  & button {
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 7px 0;
+    max-width: 195px;
+    font-weight: bold;
+  }
+
+  & img {
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    & button {
+      max-width: 162px;
+    }
+
     width: 162px;
     height: 357.14px;
+
+    & img {
+      width: 161.79px;
+      height: 242.55px;
+    }
   }
 
-  .productItem img {
-    width: 161.79px;
-    height: 242.55px;
-  }
-}
-
-@media (max-width: 750px) {
-  .productItem {
+  @media (max-width: 750px) {
     margin-top: 18px;
-  }
-
-  .productItens {
-    gap: 19px;
   }
 }

@@ -3,12 +3,17 @@
   align-items: center;
   flex-wrap: wrap;
   max-width: 160px;
-}
 
-.sizeContainer input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
+  & input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  & label {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 .sizeContainer input[type="checkbox"]+button {
@@ -26,9 +31,4 @@
 .sizeContainer input[type="checkbox"]:checked+button {
   border: 2px solid var(--primary-color);
   color: #000;
-}
-
-.sizeContainer label {
-  display: block;
-  cursor: pointer;
 }

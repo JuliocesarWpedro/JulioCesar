@@ -1,21 +1,26 @@
   .colorContainer {
     margin-bottom: 16px;
     gap: 16px;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    label {
+      text-transform: capitalize;
+    }
   }
 
-  .colorContainer:first-child {
-    margin-top: 20px;
-  }
-
-  .colorContainer:last-child {
-    margin-bottom: 0px;
-  }
-
-  .colorContainer input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
 
   .colorContainer input[type="checkbox"]+label {
     position: relative;
@@ -37,13 +42,9 @@
   .colorContainer input[type="checkbox"]:checked+label::after {
     content: "";
     position: absolute;
-    left: 2.8px;
-    bottom: 2.2px;
+    left: 2.79566666px;
+    bottom: 2.8px;
     width: 11px;
     height: 11px;
     background: var(--primary-color);
-  }
-
-  .colorContainer label {
-    text-transform: capitalize;
   }

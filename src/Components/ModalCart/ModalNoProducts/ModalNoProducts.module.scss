@@ -16,42 +16,47 @@
   right: 0;
   bottom: 0;
   top: 0;
+
+  @media (max-width: 588px) {
+    max-width: 588px;
+  }
+
+  & h4 {
+    padding-top: 40px;
+    font-size: 35px;
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    font-family: Open Sans;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    color: var(--gray2-color);
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
+
+  & button {
+    font-family: Open Sans, sans-serif;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid var(--gray2-color);
+    outline: none;
+    font-size: 15px;
+    padding: 16px 30px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  & button:hover {
+    color: var(--gray2-color);
+  }
 }
 
-.emptyModal h4 {
-  padding-top: 40px;
-  font-size: 35px;
-  font-family: Open Sans, sans-serif;
-  font-weight: 400;
-  font-family: Open Sans;
-  line-height: 40px;
-  margin-bottom: 10px;
-}
 
-.emptyModal p {
-  font-family: Open Sans, sans-serif;
-  font-weight: 400;
-  color: var(--gray2-color);
-  line-height: 25px;
-  margin-bottom: 15px;
-}
-
-.emptyModal button {
-  font-family: Open Sans, sans-serif;
-  font-weight: 600;
-  background: transparent;
-  border: 1px solid var(--gray2-color);
-  outline: none;
-  font-size: 15px;
-  padding: 16px 30px;
-  cursor: pointer;
-  border-radius: 50px;
-}
-
-.emptyModal button:hover {
-  color: var(--gray2-color);
-
-}
 
 .cartContains {
   position: absolute;
@@ -100,10 +105,4 @@
 
 .closeIcon:hover .ball {
   opacity: 1;
-}
-
-@media (max-width: 588px) {
-  .emptyModal {
-    max-width: 588px;
-  }
 }

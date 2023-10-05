@@ -32,6 +32,10 @@
   display: flex;
   gap: 40px;
   align-items: center;
+
+  @media (max-width: 415px) {
+    flex-direction: column;
+  }
 }
 
 
@@ -41,40 +45,41 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  & h3 {
+    margin: 10px 0;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: black;
+  }
+
+  & p {
+    margin-bottom: 1px;
+    font-family: Open Sans;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+  }
+
+  & h4 {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--gray2-color);
+    margin-bottom: 14px;
+  }
 }
 
-.productItem h3 {
-  margin: 10px 0;
-  font-family: Open Sans, sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 400;
-  line-height: 19px;
-  letter-spacing: 0em;
-  color: black;
-}
 
-.productItem p {
-  margin-bottom: 1px;
-  font-family: Open Sans;
-  color: black;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0em;
-}
-
-
-.productItem h4 {
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: var(--gray2-color);
-  margin-bottom: 14px;
-}
 
 .quantityContainer {
   display: flex;
@@ -82,33 +87,33 @@
   margin: 0;
   align-items: center;
   justify-content: center;
-}
 
-.quantityContainer button {
-  flex: 1;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  font-family: Open Sans;
-  outline: none;
-  border: 1px solid rgb(214, 214, 214);
-  padding: 16px;
-  cursor: pointer;
-  font-weight: bold;
-  color: rgb(77, 77, 77);
-}
+  & button {
+    flex: 1;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-family: Open Sans;
+    outline: none;
+    border: 1px solid rgb(214, 214, 214);
+    padding: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(77, 77, 77);
+  }
 
-.quantityContainer div {
-  font-family: Open Sans;
+  & div {
+    font-family: Open Sans;
 
-  padding: 17px;
-  flex: 1;
-  border: 1px solid rgb(214, 214, 214);
-}
+    padding: 17px;
+    flex: 1;
+    border: 1px solid rgb(214, 214, 214);
+  }
 
-.quantityContainer button:hover {
-  background: rgb(214, 214, 214);
-  transition: .3s;
+  & button:hover {
+    background: rgb(214, 214, 214);
+    transition: .3s;
+  }
 }
 
 
@@ -122,14 +127,8 @@
   padding: 16px 30px;
   cursor: pointer;
   border-radius: 6px;
-}
 
-.productRemove:hover {
-  color: var(--gray2-color);
-}
-
-@media (max-width: 415px) {
-  .modalProducts {
-    flex-direction: column;
+  & :hover {
+    color: var(--gray2-color);
   }
 }

@@ -1,6 +1,10 @@
 .filterContainer {
   width: 250px;
   margin-right: 44px;
+
+  @media(max-width: 1024px) {
+    display: none;
+  }
 }
 
 .filterTitle {

@@ -63,6 +63,10 @@
   right: 0;
   bottom: 0;
   top: 0;
+
+  @media (max-width: 588px) {
+    max-width: 588px;
+  }
 }
 
 .backgroundFound {

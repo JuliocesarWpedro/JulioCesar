@@ -11,13 +11,19 @@
   display: flex !important;
   align-items: center !important;
   flex-wrap: wrap;
+
+  & input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  & label {
+    display: block;
+    cursor: pointer;
+  }
 }
 
-.filterSizes input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
 
 .filterSizes input[type="checkbox"]+button {
   border-radius: none;
@@ -34,9 +40,4 @@
 .filterSizes input[type="checkbox"]:checked+button {
   border: 2px solid var(--primary-color);
   color: #000;
-}
-
-.filterSizes label {
-  display: block;
-  cursor: pointer;
 }

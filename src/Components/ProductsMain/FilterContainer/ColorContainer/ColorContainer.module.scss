@@ -1,12 +1,22 @@
 .colorContainer {
   margin-bottom: 8px;
+
+  & input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  & label {
+    text-transform: capitalize;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+  }
 }
 
-.colorContainer input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
 
 .colorContainer input[type="checkbox"]+label {
   position: relative;
@@ -36,29 +46,20 @@
 }
 
 
-.colorContainer label {
-  text-transform: capitalize;
-  font-family: Open Sans, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0em;
-}
-
 .moreColors {
   cursor: pointer;
   display: flex;
   align-items: center;
   color: var(--gray2-color);
   text-decoration: underline;
-}
 
-.moreColors p {
-  margin-right: 4px;
-  font-family: Open Sans, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 12px;
-  letter-spacing: 0em;
-  text-decoration: underline;
+  & p {
+    margin-right: 4px;
+    font-family: Open Sans, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-decoration: underline;
+  }
 }

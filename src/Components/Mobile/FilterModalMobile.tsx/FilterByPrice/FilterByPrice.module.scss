@@ -7,17 +7,18 @@
   letter-spacing: 0em;
   color: #000000;
 
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  & input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
 }
 
-.priceContainer:last-child {
-  margin-bottom: 0px;
-}
 
-.priceContainer input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
 
 .priceContainer input[type="checkbox"]+label {
   position: relative;
@@ -39,8 +40,8 @@
 .priceContainer input[type="checkbox"]:checked+label::after {
   content: "";
   position: absolute;
-  left: 3px;
-  bottom: 5.1px;
+  left: 2.7px;
+  bottom: 4.9px;
   width: 11px;
   height: 11px;
   background: var(--primary-color);
