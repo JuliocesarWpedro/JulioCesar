@@ -1,5 +1,6 @@
-.orderMobile {
+.orderModalMobile {
   position: absolute;
+  z-index: 6;
   width: 100%;
   height: 100%;
   left: 0;
@@ -9,7 +10,7 @@
   justify-content: center;
 }
 
-.orderContainer {
+.orderModalContainer {
   width: 100%;
   background: white;
   height: 100%;
@@ -22,7 +23,7 @@
   top: 0;
 }
 
-.mainContainer {
+.mainModalContainer {
   display: flex;
   flex-direction: column;
 }

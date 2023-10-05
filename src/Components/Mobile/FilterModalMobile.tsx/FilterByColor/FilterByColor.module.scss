@@ -1,0 +1,49 @@
+  .colorContainer {
+    margin-bottom: 16px;
+    gap: 16px;
+  }
+
+  .colorContainer:first-child {
+    margin-top: 20px;
+  }
+
+  .colorContainer:last-child {
+    margin-bottom: 0px;
+  }
+
+  .colorContainer input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .colorContainer input[type="checkbox"]+label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 24px;
+  }
+
+  .colorContainer input[type="checkbox"]+label::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    bottom: -1px;
+    border: solid 1px var(--gray2-color);
+    vertical-align: bottom;
+  }
+
+  .colorContainer input[type="checkbox"]:checked+label::after {
+    content: "";
+    position: absolute;
+    left: 2.8px;
+    bottom: 2.2px;
+    width: 11px;
+    height: 11px;
+    background: var(--primary-color);
+  }
+
+  .colorContainer label {
+    text-transform: capitalize;
+  }

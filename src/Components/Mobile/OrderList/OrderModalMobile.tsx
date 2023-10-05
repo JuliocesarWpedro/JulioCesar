@@ -11,9 +11,9 @@ const OrderModalMobile = ({
   const { setOrderOption, handleOrder } = useFilter();
 
   return (
-    <div className={styles.orderMobile}>
-      <div className={styles.orderContainer}>
-        <div className={styles.mainContainer}>
+    <div className={styles.orderModalMobile}>
+      <div className={styles.orderModalContainer}>
+        <div className={styles.mainModalContainer}>
           <div className={styles.topOrderContainer}>
             <h2>ORDENAR</h2>
             <img

@@ -56,7 +56,6 @@
 .cartContains {
   position: absolute;
   top: 0;
-  display: block;
   width: 100%;
   font-family: Open Sans, sans-serif;
   display: flex;
@@ -80,7 +79,7 @@
 .xIcon {
   cursor: pointer;
   position: absolute;
-  top: 19px;
+  top: 25px;
   left: 30px;
   color: white;
   transform: translate(-50%, -50%);
@@ -89,8 +88,8 @@
 
 .ball {
   position: absolute;
-  top: 5px;
-  left: 14px;
+  top: 10.6px;
+  left: 14.8px;
   width: 30px;
   height: 30px;
   background-color: #1e1e1e;
