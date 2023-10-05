@@ -44,6 +44,8 @@ export function FilterContextProvider({ children }: React.PropsWithChildren) {
       setOrderOption('lowestPrice');
     } else if (option === 'biggestPrice') {
       setOrderOption('biggestPrice');
+    } else {
+      setOrderOption('');
     }
   }
 

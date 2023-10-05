@@ -25,7 +25,7 @@ const ColorContainer = () => {
           onClick={() => setNumberMaxColor(colors.length)}
         >
           <p>Ver todas as cores</p>
-          <img src={ArrowIcon} alt="arrow" />
+          <img src={ArrowIcon} alt="Arrow Icon" />
         </div>
       )}
     </>

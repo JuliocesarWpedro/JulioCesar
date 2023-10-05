@@ -79,3 +79,32 @@
   width: 18px;
   height: 13px;
 }
+
+.buttonsFilter {
+  display: flex;
+  justify-content: center;
+  gap: 23px;
+  padding: 30px 16px 17px 16px;
+}
+
+.buttonsFilter button:first-child {
+  width: 100%;
+  max-width: 300px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.buttonsFilter button:last-child {
+  width: 100%;
+  cursor: pointer;
+  max-width: 300px;
+  height: 35px;
+  background-color: transparent;
+  color: var(--gray2-color);
+  border: 1px solid var(--gray2-color);
+  outline: none;
+}

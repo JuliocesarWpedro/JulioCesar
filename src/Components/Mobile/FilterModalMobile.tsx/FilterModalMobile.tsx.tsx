@@ -5,6 +5,7 @@ import ArrowIcon from '../../../img/Icons/ArrowIcon.svg';
 import FilterByColor from './FilterByColor/FilterByColor';
 import FilterBySize from './FilterBySize/FilterBySize';
 import FilterByPrice from './FilterByPrice/FilterByPrice';
+import { useFilter } from '../../../Contexts/FilterContext';
 
 const FilterModalMobile = ({
   setOpenModalFilter,
@@ -15,12 +16,26 @@ const FilterModalMobile = ({
   const [openSizes, setOpenSizes] = React.useState<boolean>(false);
   const [openPrices, setOpenPrices] = React.useState<boolean>(false);
 
+  const {
+    selectedColors,
+    selectedSizes,
+    selectedPrice,
+    setSelectedPrice,
+    setSelectedColors,
+    setSelectedSizes,
+  } = useFilter();
+
   return (
     <div className={styles.filterContainer}>
       <div className={styles.topFilterContainer}>
         <h2>FILTRAR</h2>
         <img
-          onClick={() => setOpenModalFilter(false)}
+          onClick={() => {
+            setOpenModalFilter(false),
+              setSelectedSizes([]),
+              setSelectedColors([]),
+              setSelectedPrice(null);
+          }}
           src={closeIcon}
           alt="Close Icon"
         />
@@ -57,6 +72,23 @@ const FilterModalMobile = ({
           {openPrices && <FilterByPrice />}
         </div>
       </div>
+      {(selectedColors.length >= 1 ||
+        selectedSizes.length >= 1 ||
+        selectedPrice !== null) && (
+        <div className={styles.buttonsFilter}>
+          <button onClick={() => setOpenModalFilter(false)}>APLICAR</button>
+          <button
+            onClick={() => {
+              setOpenModalFilter(false),
+                setSelectedSizes([]),
+                setSelectedPrice(null),
+                setSelectedColors([]);
+            }}
+          >
+            LIMPAR
+          </button>
+        </div>
+      )}
     </div>
   );
 };

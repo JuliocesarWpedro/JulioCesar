@@ -14,7 +14,7 @@ const ModalWithProducts = ({
   return (
     <div key={index} className={styles.modalProducts}>
       <div>
-        <img src={item.image} alt="" />
+        <img src={item.image} alt="Imagem Products" />
       </div>
       <div className={styles.productItem}>
         <h2>{item.name}</h2>

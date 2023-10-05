@@ -17,7 +17,9 @@ const OrderModalMobile = ({
           <div className={styles.topOrderContainer}>
             <h2>ORDENAR</h2>
             <img
-              onClick={() => setOpenModalOrder(false)}
+              onClick={() => {
+                setOpenModalOrder(false), setOrderOption('');
+              }}
               src={closeIcon}
               alt="Close Icon"
             />

@@ -10,7 +10,7 @@ const OrderList = () => {
   return (
     <div onClick={() => setIsOpen(!isOpen)} className={styles.boxOrderList}>
       <p className={styles.orderListText}>
-        Ordenar por: <img src={arrowIcon} alt=""></img>
+        Ordenar por: <img src={arrowIcon} alt="Arrow Icon"></img>
       </p>
       {isOpen && (
         <ul className={styles.listOpen}>
