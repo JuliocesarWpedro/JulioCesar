@@ -17,7 +17,7 @@ const ProductItens = ({
   limitProducts: number;
   setShowButton: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
-  const { data } = useFetch<Products[]>('http://localhost:5000/products');
+  const { data } = useFetch<Products[]>('http://localhost:5001/products');
 
   const { toggleCart, addToCart } = useCart();
 
@@ -32,7 +32,6 @@ const ProductItens = ({
         (selectedColors as string[]).includes(product.color),
       );
     }
-
 
     if (Array.isArray(selectedSizes) && selectedSizes.length > 0) {
       products = products.filter((product) => {
@@ -55,7 +54,6 @@ const ProductItens = ({
         );
       });
     }
-    
 
     if (orderOption === 'recent') {
       products.sort((a, b) => +b.id - +a.id);
@@ -75,7 +73,6 @@ const ProductItens = ({
       setShowButton(true);
     }
   }, [data, limitProducts, setShowButton, filteredProducts]);
-
 
   return (
     <div className={styles.productItens}>

@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start": "npm run dev",
-    "json-server": "json-server --watch db.json --port 5000",
+    "json-server": "json-server --watch db.json --port 5001",
     "start:full": "concurrently \"npm run dev\" \"npm run json-server\""
   },
   "dependencies": {
