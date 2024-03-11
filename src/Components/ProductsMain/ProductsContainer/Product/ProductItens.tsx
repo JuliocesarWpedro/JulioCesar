@@ -33,6 +33,7 @@ const ProductItens = ({
       );
     }
 
+
     if (Array.isArray(selectedSizes) && selectedSizes.length > 0) {
       products = products.filter((product) => {
         if (Array.isArray(product.size)) {
@@ -54,6 +55,7 @@ const ProductItens = ({
         );
       });
     }
+    
 
     if (orderOption === 'recent') {
       products.sort((a, b) => +b.id - +a.id);
@@ -73,6 +75,7 @@ const ProductItens = ({
       setShowButton(true);
     }
   }, [data, limitProducts, setShowButton, filteredProducts]);
+
 
   return (
     <div className={styles.productItens}>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { Price } from '../ts/Products';
 
 type Size = string;
@@ -21,59 +21,45 @@ interface IFilter {
 const FilterContext = React.createContext<IFilter | null>(null);
 
 export function FilterContextProvider({ children }: React.PropsWithChildren) {
-  const [selectedPrice, setSelectedPrice] = React.useState<Price | null>(null);
-  const [selectedColors, setSelectedColors] = React.useState<string[] | []>([]);
-  const [selectedSizes, setSelectedSizes] = React.useState<Size[] | []>([]);
-  const [orderOption, setOrderOption] = React.useState<string>('');
+  const [selectedPrice, setSelectedPrice] = useState<Price | null>(null);
+  const [selectedColors, setSelectedColors] = useState<string[]>([]);
+  const [selectedSizes, setSelectedSizes] = useState<Size[]>([]);
+  const [orderOption, setOrderOption] = useState<string>('');
 
-  const toggleColor = (color: string) => {
-    setSelectedColors((prevState) => {
-      const prevColors = prevState as string[];
-      if (prevColors.includes(color)) {
-        return prevState.filter((item) => item !== color) as string[];
-      } else {
-        return [...prevState, color] as string[];
-      }
-    });
-  };
+  const toggleColor = useCallback((color: string) => {
+    setSelectedColors((prevColors) =>
+      prevColors.includes(color)
+        ? prevColors.filter((item) => item !== color)
+        : [...prevColors, color],
+    );
+  }, []);
 
+  const handleOrder = useCallback((option: string) => {
+    setOrderOption((prevOption) => (prevOption === option ? '' : option));
+  }, []);
 
-  function handleOrder(option: string) {
-    if (option === 'recent') {
-      setOrderOption('recent');
-    } else if (option === 'lowestPrice') {
-      setOrderOption('lowestPrice');
-    } else if (option === 'biggestPrice') {
-      setOrderOption('biggestPrice');
-    } else {
-      setOrderOption('');
-    }
-  }
+  const toggleSize = useCallback((size: Size) => {
+    setSelectedSizes((prevSizes) =>
+      prevSizes.includes(size)
+        ? prevSizes.filter((prevSize) => prevSize !== size)
+        : [...prevSizes, size],
+    );
+  }, []);
 
-  const toggleSize = (size: Size) => {
-    setSelectedSizes((prevSizes) => {
-      const prevSizesArray = prevSizes as Size[];
-      if (prevSizesArray.includes(size)) {
-        return prevSizes.filter((prevSize) => prevSize !== size);
-      } else {
-        return [...prevSizes, size];
-      }
-    });
-  };
+  const handleCheckboxChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const selectedValue = JSON.parse(event.target.value);
 
-  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedValue = JSON.parse(event.target.value);
-
-    if (
-      selectedPrice &&
-      selectedValue.minPrice === selectedPrice.minPrice &&
-      selectedValue.maxPrice === selectedPrice.maxPrice
-    ) {
-      setSelectedPrice(null);
-    } else {
-      setSelectedPrice(selectedValue);
-    }
-  };
+      setSelectedPrice((prevPrice) =>
+        prevPrice &&
+        selectedValue.minPrice === prevPrice.minPrice &&
+        selectedValue.maxPrice === prevPrice.maxPrice
+          ? null
+          : selectedValue,
+      );
+    },
+    [],
+  );
 
   return (
     <FilterContext.Provider
