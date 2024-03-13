@@ -19,7 +19,12 @@ const ModalCart = () => {
               </div>
 
               <h3>
-                Seu carrinho ({productsInLStorage && productsInLStorage.length}{' '}
+                Seu carrinho ({' '}
+                {productsInLStorage &&
+                  productsInLStorage.reduce(
+                    (accumulator, current) => (accumulator += current.quantity),
+                    0,
+                  )}{' '}
                 {productsInLStorage.length === 1 ? 'item' : 'itens'})
               </h3>
             </div>
