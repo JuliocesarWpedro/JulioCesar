@@ -17,7 +17,9 @@ const ProductItens = ({
   limitProducts: number;
   setShowButton: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
-  const { data } = useFetch<Products[]>('http://localhost:5001/products');
+  const { data, loading } = useFetch<Products[]>(
+    'https://api-storage-products.vercel.app/products',
+  );
 
   const { toggleCart, addToCart } = useCart();
 
@@ -76,6 +78,10 @@ const ProductItens = ({
 
   return (
     <div className={styles.productItens}>
+      {loading &&
+        Array.from({ length: limitProducts }).map((_, index) => (
+          <div className={styles.productItemLoading} key={index}></div>
+        ))}
       {data !== null &&
         filteredProducts &&
         filteredProducts.slice(0, limitProducts).map((item) => (
