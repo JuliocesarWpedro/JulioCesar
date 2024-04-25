@@ -88,7 +88,7 @@ const ProductItens = ({
           <div className={styles.productItem} key={item.id}>
             <img src={item.image} alt={item.name} />
             <h3>{item.name}</h3>
-            <p>{formatPrice(item.price)}</p>
+            <p>R${formatPrice(item.price)}</p>
             <h4>
               até {item.parcelamento[0]}x de R$
               {formatPrice(item.parcelamento[1])}

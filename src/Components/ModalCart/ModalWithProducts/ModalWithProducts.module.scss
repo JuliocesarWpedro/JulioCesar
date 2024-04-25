@@ -33,6 +33,18 @@
   gap: 40px;
   align-items: center;
 
+
+  div:nth-child(1) {
+    width: 195px;
+    height: 293px;
+
+    img {
+      width: 195px;
+      height: 293px;
+      object-fit: cover;
+    }
+  }
+
   @media (max-width: 415px) {
     flex-direction: column;
   }

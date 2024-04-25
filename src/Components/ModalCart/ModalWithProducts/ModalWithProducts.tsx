@@ -14,11 +14,11 @@ const ModalWithProducts = ({
   return (
     <div key={index} className={styles.modalProducts}>
       <div>
-        <img src={item.image} alt="Imagem Products" />
+        <img src={item.image} alt="Imagem Product" />
       </div>
       <div className={styles.productItem}>
         <h2>{item.name}</h2>
-        <p>R$ {formatPrice(item.price * item.quantity)}</p>
+        <p>R${formatPrice(item.price * item.quantity)}</p>
         <div className={styles.quantityContainer}>
           <button onClick={() => decreaseQuantity(item)}>-</button>
           <div className={styles.quantity}>{item.quantity}</div>
